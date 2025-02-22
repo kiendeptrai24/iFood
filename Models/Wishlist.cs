@@ -9,11 +9,11 @@ namespace iFood.Models
 		[Key]
 		public int Id { get; set; }
         [ForeignKey("AppUser")]
-		public string AppUserId { get; set; }
-        public AppUser AppUser { get; set; }
+		public string? AppUserId { get; set; }
+        public AppUser? AppUser { get; set; }
 
 		[ForeignKey("Product")]
 		public int ProductId { get; set; }
-		public Product Product { get; set; }
+		public Product? Product { get; set; }
 	}
 }

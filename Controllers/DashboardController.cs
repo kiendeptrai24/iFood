@@ -78,7 +78,7 @@ public class DashboardController : Controller
                 Name = productVM.Title,
                 Description = productVM.Description,
                 Category = productVM.Category,
-                ImageURL = result.Url.ToString(),
+                Image = result.Url.ToString(),
                 AppUserId = productVM.AppUserId,
                 Price = productVM.Price,
                 Quantity = productVM.Quantity,
@@ -104,7 +104,7 @@ public class DashboardController : Controller
             Quantity = product.Quantity,
             Price = product.Price,
             Category = product.Category,
-            URL = product.ImageURL
+            URL = product.Image
         };
         return View(productVM);
     }
@@ -133,9 +133,9 @@ public class DashboardController : Controller
             return View(productVM);
         }
 
-        if (!string.IsNullOrEmpty(userProduct.ImageURL))
+        if (!string.IsNullOrEmpty(userProduct.Image))
         {
-            var photo = _photoService.DeletePhotoAsync(userProduct.ImageURL);
+            var photo = _photoService.DeletePhotoAsync(userProduct.Image);
         }
 
         var product = new Product
@@ -143,7 +143,7 @@ public class DashboardController : Controller
             ProductID = id,
             Name = productVM.Title,
             Description = productVM.Description,
-            ImageURL = photoResult.Url.ToString(),
+            Image = photoResult.Url.ToString(),
             Category = productVM.Category,
             Quantity = productVM.Quantity,
             Price = productVM.Price,

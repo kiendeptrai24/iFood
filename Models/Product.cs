@@ -20,10 +20,17 @@ public class Product
     // List rate, rate
     
     public int Quantity { get; set; }
-    public string? ImageURL { get; set; }
+    public string? Image { get; set; }
+    public string? URL { get; set; }
     public ProductCategory? Category { get; set; }
     public DateTime DateSell { get ; set; }
     public decimal Total => Quantity * Price;
+    public double Rating => Reviews != null && Reviews.Count > 0 
+        ? (double)(Reviews.Average(r => (double?)r.Rating) ?? 0)
+        : 0;
+    public List<Review>? Reviews { get; set; }
+
+
 
     // Khóa ngoại: Người bán
     [ForeignKey("AppUser")]

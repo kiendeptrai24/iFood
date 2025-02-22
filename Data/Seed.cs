@@ -22,7 +22,7 @@ namespace iFood.Data
                         new Product()
                         {
                             Name = "Mi trung",
-                            ImageURL = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
+                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description ="mi chung hao han",
                             SoldOut = 0,
                             Price = 12000,
@@ -31,7 +31,7 @@ namespace iFood.Data
                         new Product()
                         {
                             Name = "Mi tom",
-                            ImageURL = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
+                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description ="mi tom hao han",
                             SoldOut = 0,
                             Price = 10000,
@@ -40,7 +40,7 @@ namespace iFood.Data
                         new Product()
                         {
                             Name = "Mi goi",
-                            ImageURL = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
+                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description ="mi goi haohao",
                             SoldOut = 0,
                             Price = 5000,

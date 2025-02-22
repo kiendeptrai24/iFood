@@ -264,3 +264,4 @@ C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\obj\Debug\net9.0\compressed\m2c
 C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\bin\Debug\net9.0\CloudinaryDotNet.dll
 C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\obj\Debug\net9.0\compressed\n9a9k8hffd-3yyjgiu7ma.gz
+C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\obj\Debug\net9.0\iFood.sourcelink.json

@@ -3,6 +3,7 @@ using iFood.Models;
 using iFood.Interfaces;
 using iFood.ViewModels;
 using iFood.Data.Enum;
+using CloudinaryDotNet.Actions;
 
 namespace iFood.Controllers;
 
@@ -79,7 +80,8 @@ public class ProductController : Controller
                 Description = productVM.Description,
                 Category = productVM.Category,
                 DateSell = productVM.Date,
-                ImageURL = result.Url.ToString(),
+                URL = productVM.URL,
+                Image = result.Url.ToString(),
                 AppUserId = productVM.AppUserId,
                 Price = productVM.Price,
                 Quantity = productVM.Quantity,
@@ -102,10 +104,11 @@ public class ProductController : Controller
         {
             Title = product.Name,
             Description = product.Description,
+            Date = product.DateSell,
             Quantity = product.Quantity,
             Price = product.Price,
             Category = product.Category,
-            URL = product.ImageURL
+            URL = product.Image
         };
         return View(productVM);
     }
@@ -125,30 +128,49 @@ public class ProductController : Controller
         {
             return View("Error");   
         }
-
-        var photoResult = await _photoService.AddPhotoAsync(productVM.Image);
-
-        if (photoResult.Error != null)
+        Product product;
+        if(productVM.Image !=  null)
         {
-            ModelState.AddModelError("Image", "Photo upload failed");
-            return View(productVM);
+            var photoResult = await _photoService.AddPhotoAsync(productVM.Image);
+
+            if (photoResult.Error != null)
+            {
+                ModelState.AddModelError("Image", "Photo upload failed");
+                return View(productVM);
+            }
+            if (!string.IsNullOrEmpty(userProduct.Image))
+            {
+                var photo = _photoService.DeletePhotoAsync(userProduct.Image);
+            }
+            product = new Product
+            {
+                ProductID = id,
+                Name = productVM.Title,
+                Description = productVM.Description,
+                DateSell = productVM.Date,
+                Image = photoResult.Url.ToString(),
+                URL = productVM.URL,
+                Category = productVM.Category,
+                Quantity = productVM.Quantity,
+                Price = productVM.Price,
+            };
+        }
+        else{
+            product = new Product
+            {
+                ProductID = id,
+                Name = productVM.Title,
+                Description = productVM.Description,
+                DateSell = productVM.Date,
+                Image = productVM.URL,
+                Category = productVM.Category,
+                Quantity = productVM.Quantity,
+                Price = productVM.Price,
+            };
         }
 
-        if (!string.IsNullOrEmpty(userProduct.ImageURL))
-        {
-            var photo = _photoService.DeletePhotoAsync(userProduct.ImageURL);
-        }
 
-        var product = new Product
-        {
-            ProductID = id,
-            Name = productVM.Title,
-            Description = productVM.Description,
-            ImageURL = photoResult.Url.ToString(),
-            Category = productVM.Category,
-            Quantity = productVM.Quantity,
-            Price = productVM.Price,
-        };
+
 
         _productRepository.Update(product);
 
@@ -171,9 +193,9 @@ public class ProductController : Controller
             return View("Error");
         }
 
-        if (!string.IsNullOrEmpty(productDetails.ImageURL))
+        if (!string.IsNullOrEmpty(productDetails.Image))
         {
-            _ = _photoService.DeletePhotoAsync(productDetails.ImageURL);
+            _ = _photoService.DeletePhotoAsync(productDetails.Image);
         }
 
         _productRepository.Delete(productDetails);
