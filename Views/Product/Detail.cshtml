@@ -47,7 +47,26 @@
         .btn-buy:hover {
             background-color: #e64a19;
         }
+        #notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            display: none; /* Ban đầu ẩn */
+            z-index: 9999;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
     </style>
+<div id="success-message" style="display:none; background-color: #4CAF50; color: white; padding: 10px; text-align: center; border-radius: 5px;"></div>
+<div id="error-message" style="display:none; background-color: #f44336; color: white; padding: 10px; text-align: center; border-radius: 5px;"></div>
 <section class="container my-5 pt-5">
         <div class="row">
             <div class="col-lg-6">
@@ -112,7 +131,12 @@
                 </div>
 
                 <div class="mt-4 d-flex">
-                    <button class="btn btn-dark">Add To Cart</button>
+                    <button class="add-to-cart-btn" data-id="@Model.ProductID">Add to Cart</button>
+                    <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Cart" asp-action="Create"
+                         asp-route-id="@Model.ProductID">
+                                        Add to cart
+                                    </a>
+                    
                     <button class="btn btn-outline-secondary ms-2"><i class="bi bi-heart"></i></button>
                     <button class="btn btn-outline-secondary ms-2"><i class="bi bi-share"></i></button>
                 </div>
@@ -154,4 +178,27 @@
     // Gọi hàm với giá trị điểm đánh giá (Ví dụ: 4.5)
     //generateStars("@Model.Rating");
     generateStars(4.5);
+
+
+   
+    $(document).on("click", ".add-to-cart-btn", function (e) {
+    e.preventDefault();
+    var productId = $(this).data("id");
+
+    $.ajax({
+        url: "/Cart/Create",
+        type: "GET",
+        data: { id: productId },
+        success: function (response) {
+            if (response.success) {
+                $("#success-message").text(response.message).fadeIn().delay(2000).fadeOut();
+            } else {
+                $("#error-message").text(response.message).fadeIn().delay(2000).fadeOut();
+            }
+        }
+    });
+});
+
 </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

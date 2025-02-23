@@ -1,0 +1,68 @@
+﻿
+
+@model IEnumerable<Cart>
+
+
+<section class="bg-light d-flex justify-content-center align-items-center min-vh-100 pt-3">
+    <div class="card w-75 shadow-lg">
+        <div class="card-header bg-dark text-white text-center position-relative">
+            <i class="bi bi-cart3 fs-3"></i>
+            <span class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger">@Model.Count()</span>
+        </div>
+        <div class="card-body">
+            <h2 class="text-center mb-4">Shopping Bag</h2>
+            <div class="list-group">
+                <!-- Item 1 -->
+                @foreach(var item in Model)
+                {
+                  <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center">
+                          <button class="btn btn-light me-2"  id="myButton"><i class="bi bi-x"></i></button>
+                          <button class="btn btn-light me-2"><i class="bi bi-heart"></i></button>
+                          <img src="@item.product.Image" alt="White high-top sneaker" class="img-thumbnail" width="70">
+                          <div class="ms-3">
+                              <p class="mb-0 fw-semibold">@item.product.Name</p>
+                              <small class="text-muted">Category: @item.product.Category</small>
+                              <small class="text-muted">Price of one: $@item.Price</small>
+
+                          </div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                          <button class="btn btn-light"><i class="bi bi-plus"></i></button>
+                          <span class="mx-2">@item.Quantity</span>
+                          <button class="btn btn-light"><i class="bi bi-dash"></i></button>
+                      </div>
+                      <p class="fw-semibold mb-0">Total: $@item.Total</p>
+                  </div>
+                }
+                <!-- More items can be added here -->
+            </div>
+        </div>
+        <div class="card-footer bg-danger text-white text-end">
+            <p class="fw-semibold mb-0">Total: $200</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-dark">Update</button>
+            <button class="btn btn-dark">Checkout</button>
+        </div>
+    </div>
+   
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myButton").click(function () {
+            $.ajax({
+                url: "/ControllerName/HandleRequest", // Thay bằng đường dẫn thực tế
+                type: "POST",
+                success: function (response) {
+                    $("#responseMessage").text(response.message);
+                },
+                error: function () {
+                    $("#responseMessage").text("Có lỗi xảy ra!");
+                }
+            });
+        });
+    });
+</script>

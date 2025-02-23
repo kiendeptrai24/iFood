@@ -15,13 +15,13 @@ public class ProductRepository : IProductRepository
     }
     public bool Add(Product product)
     {
-        _context.Add(product);
+        _context.Products.Add(product);
         return Save();
     }
 
     public bool Delete(Product product)
     {
-        _context.Remove(product);
+        _context.Products.Remove(product);
         return Save();
     }
 
@@ -72,7 +72,7 @@ public class ProductRepository : IProductRepository
 
     public bool Update(Product product)
     {
-        _context.Update(product);
+        _context.Products.Update(product);
         return Save();
     }
 }
