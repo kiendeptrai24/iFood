@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8xX3AmdkdjusNNs/9t3FvEb77oz4nJtLKtuRmuiqr8s=",
+  "Hash": "9rM/48ANi9jMDuQix2UlWf5C22BM8TWlPJOwtJojlH8=",
   "Source": "iFood",
   "BasePath": "_content/iFood",
   "Mode": "Default",
@@ -1130,12 +1130,12 @@
       "OriginalItemSpec": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-3yyjgiu7ma.gz",
+      "Identity": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-6qgk9917nn.gz",
       "SourceId": "iFood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/iFood",
-      "RelativePath": "css/styles#[.{fingerprint=3yyjgiu7ma}]?.css.gz",
+      "RelativePath": "css/styles#[.{fingerprint=6qgk9917nn}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1144,8 +1144,8 @@
       "RelatedAsset": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\css\\styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "o4znqg5sqx",
-      "Integrity": "mPttx32IIxoC+wC5DhgqTnfWoUZKbc5oxFjSDBEtPRg=",
+      "Fingerprint": "f4lw3z7y8b",
+      "Integrity": "EY614ZmD7H/3Em/gSfgLMbuM/k6ajjARPRh5NXiVr74=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\css\\styles.css"
@@ -1445,12 +1445,12 @@
       "OriginalItemSpec": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-awo6u2p9al.gz",
+      "Identity": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-adeidd1es3.gz",
       "SourceId": "iFood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/iFood",
-      "RelativePath": "js/scripts#[.{fingerprint=awo6u2p9al}]?.js.gz",
+      "RelativePath": "js/scripts#[.{fingerprint=adeidd1es3}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1459,19 +1459,19 @@
       "RelatedAsset": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\js\\scripts.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "cbbpwxg1u0",
-      "Integrity": "eHZNclzQthXX2zIoEiyAVKI659mOiqoQdmOAKxmq/yI=",
+      "Fingerprint": "icbx90ks2c",
+      "Integrity": "Tl/TnJrAHIq/wvpiebIKx6MfZ/yAM17eXWPJrSDU8tg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\js\\scripts.js"
     },
     {
-      "Identity": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-ez7ga9n3tx.gz",
+      "Identity": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-acptf84n02.gz",
       "SourceId": "iFood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/iFood",
-      "RelativePath": "css/site#[.{fingerprint=ez7ga9n3tx}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=acptf84n02}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1480,8 +1480,8 @@
       "RelatedAsset": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "pxywpcy3a9",
-      "Integrity": "3cFABi1mKEgaEgtLrelR9aF7vAZLQo67FKk5fJvvgrI=",
+      "Fingerprint": "h0ovbord3x",
+      "Integrity": "UcZmmenRkZMtz0NPPQT3fdElrBYO3obSkW5bdDRy7Sg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\css\\site.css"
@@ -2005,8 +2005,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ez7ga9n3tx",
-      "Integrity": "ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw=",
+      "Fingerprint": "acptf84n02",
+      "Integrity": "dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2026,8 +2026,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3yyjgiu7ma",
-      "Integrity": "VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY=",
+      "Fingerprint": "6qgk9917nn",
+      "Integrity": "rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
@@ -9607,8 +9607,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "awo6u2p9al",
-      "Integrity": "irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI=",
+      "Fingerprint": "adeidd1es3",
+      "Integrity": "PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\scripts.js"
@@ -10897,13 +10897,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-ez7ga9n3tx.gz",
+      "Route": "css/site.acptf84n02.css",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-acptf84n02.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001239157373"
+          "Quality": "0.001245330012"
         }
       ],
       "ResponseHeaders": [
@@ -10913,19 +10913,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "806"
+          "Value": "802"
         },
         {
           "Name": "ETag",
-          "Value": "\"3cFABi1mKEgaEgtLrelR9aF7vAZLQo67FKk5fJvvgrI=\""
+          "Value": "\"UcZmmenRkZMtz0NPPQT3fdElrBYO3obSkW5bdDRy7Sg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Feb 2025 03:43:00 GMT"
+          "Value": "Mon, 24 Feb 2025 01:17:19 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -10941,18 +10941,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw=\""
+          "Value": "W/\"dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "acptf84n02"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw="
+          "Value": "sha256-dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0="
         }
       ]
     },
     {
-      "Route": "css/site.css",
+      "Route": "css/site.acptf84n02.css",
       "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -10962,7 +10970,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2035"
+          "Value": "2037"
         },
         {
           "Name": "Content-Type",
@@ -10970,121 +10978,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw=\""
+          "Value": "\"dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Feb 2025 03:43:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-ez7ga9n3tx.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "806"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3cFABi1mKEgaEgtLrelR9aF7vAZLQo67FKk5fJvvgrI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 05 Feb 2025 03:43:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-3cFABi1mKEgaEgtLrelR9aF7vAZLQo67FKk5fJvvgrI="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.ez7ga9n3tx.css",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-ez7ga9n3tx.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001239157373"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "806"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3cFABi1mKEgaEgtLrelR9aF7vAZLQo67FKk5fJvvgrI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 05 Feb 2025 03:43:00 GMT"
+          "Value": "Mon, 24 Feb 2025 01:17:19 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ez7ga9n3tx"
+          "Value": "acptf84n02"
         },
         {
           "Name": "label",
@@ -11092,13 +11000,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw="
+          "Value": "sha256-dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0="
         }
       ]
     },
     {
-      "Route": "css/site.ez7ga9n3tx.css",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\css\\site.css",
+      "Route": "css/site.acptf84n02.css.gz",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-acptf84n02.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11107,7 +11015,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2035"
+          "Value": "802"
         },
         {
           "Name": "Content-Type",
@@ -11115,56 +11023,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw=\""
+          "Value": "\"UcZmmenRkZMtz0NPPQT3fdElrBYO3obSkW5bdDRy7Sg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Feb 2025 03:43:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ez7ga9n3tx"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ljUOU8EZP3qjQxjOVN1hb/6+H4qiJm6znJ8i0mUGvgw="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.ez7ga9n3tx.css.gz",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-ez7ga9n3tx.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "806"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3cFABi1mKEgaEgtLrelR9aF7vAZLQo67FKk5fJvvgrI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 05 Feb 2025 03:43:00 GMT"
+          "Value": "Mon, 24 Feb 2025 01:17:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11182,7 +11045,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ez7ga9n3tx"
+          "Value": "acptf84n02"
         },
         {
           "Name": "label",
@@ -11190,18 +11053,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3cFABi1mKEgaEgtLrelR9aF7vAZLQo67FKk5fJvvgrI="
+          "Value": "sha256-UcZmmenRkZMtz0NPPQT3fdElrBYO3obSkW5bdDRy7Sg="
         }
       ]
     },
     {
-      "Route": "css/styles.3yyjgiu7ma.css",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-3yyjgiu7ma.gz",
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-acptf84n02.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000031858294"
+          "Quality": "0.001245330012"
         }
       ],
       "ResponseHeaders": [
@@ -11211,15 +11074,152 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "31388"
+          "Value": "802"
         },
         {
           "Name": "ETag",
-          "Value": "\"mPttx32IIxoC+wC5DhgqTnfWoUZKbc5oxFjSDBEtPRg=\""
+          "Value": "\"UcZmmenRkZMtz0NPPQT3fdElrBYO3obSkW5bdDRy7Sg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 12:18:46 GMT"
+          "Value": "Mon, 24 Feb 2025 01:17:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 01:17:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dkspl9Qij+bKNVFNPj+31ER8X4zoShiBUo4p7CLtzc0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rwua49w78m-acptf84n02.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "802"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UcZmmenRkZMtz0NPPQT3fdElrBYO3obSkW5bdDRy7Sg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 01:17:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UcZmmenRkZMtz0NPPQT3fdElrBYO3obSkW5bdDRy7Sg="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles.6qgk9917nn.css",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-6qgk9917nn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000031871494"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31375"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EY614ZmD7H/3Em/gSfgLMbuM/k6ajjARPRh5NXiVr74=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 01:20:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11239,13 +11239,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY=\""
+          "Value": "W/\"rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3yyjgiu7ma"
+          "Value": "6qgk9917nn"
         },
         {
           "Name": "label",
@@ -11253,12 +11253,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY="
+          "Value": "sha256-rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c="
         }
       ]
     },
     {
-      "Route": "css/styles.3yyjgiu7ma.css",
+      "Route": "css/styles.6qgk9917nn.css",
       "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\css\\styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -11268,7 +11268,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "254788"
+          "Value": "254761"
         },
         {
           "Name": "Content-Type",
@@ -11276,11 +11276,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY=\""
+          "Value": "\"rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 12:18:46 GMT"
+          "Value": "Mon, 24 Feb 2025 01:20:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11290,7 +11290,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3yyjgiu7ma"
+          "Value": "6qgk9917nn"
         },
         {
           "Name": "label",
@@ -11298,13 +11298,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY="
+          "Value": "sha256-rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c="
         }
       ]
     },
     {
-      "Route": "css/styles.3yyjgiu7ma.css.gz",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-3yyjgiu7ma.gz",
+      "Route": "css/styles.6qgk9917nn.css.gz",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-6qgk9917nn.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11313,7 +11313,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "31388"
+          "Value": "31375"
         },
         {
           "Name": "Content-Type",
@@ -11321,11 +11321,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mPttx32IIxoC+wC5DhgqTnfWoUZKbc5oxFjSDBEtPRg=\""
+          "Value": "\"EY614ZmD7H/3Em/gSfgLMbuM/k6ajjARPRh5NXiVr74=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 12:18:46 GMT"
+          "Value": "Mon, 24 Feb 2025 01:20:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11343,7 +11343,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3yyjgiu7ma"
+          "Value": "6qgk9917nn"
         },
         {
           "Name": "label",
@@ -11351,18 +11351,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mPttx32IIxoC+wC5DhgqTnfWoUZKbc5oxFjSDBEtPRg="
+          "Value": "sha256-EY614ZmD7H/3Em/gSfgLMbuM/k6ajjARPRh5NXiVr74="
         }
       ]
     },
     {
       "Route": "css/styles.css",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-3yyjgiu7ma.gz",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-6qgk9917nn.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000031858294"
+          "Quality": "0.000031871494"
         }
       ],
       "ResponseHeaders": [
@@ -11372,15 +11372,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "31388"
+          "Value": "31375"
         },
         {
           "Name": "ETag",
-          "Value": "\"mPttx32IIxoC+wC5DhgqTnfWoUZKbc5oxFjSDBEtPRg=\""
+          "Value": "\"EY614ZmD7H/3Em/gSfgLMbuM/k6ajjARPRh5NXiVr74=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 12:18:46 GMT"
+          "Value": "Mon, 24 Feb 2025 01:20:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11400,13 +11400,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY=\""
+          "Value": "W/\"rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY="
+          "Value": "sha256-rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c="
         }
       ]
     },
@@ -11421,7 +11421,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "254788"
+          "Value": "254761"
         },
         {
           "Name": "Content-Type",
@@ -11429,11 +11429,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY=\""
+          "Value": "\"rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 12:18:46 GMT"
+          "Value": "Mon, 24 Feb 2025 01:20:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11443,13 +11443,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VZByFMsTz6mKP0Wx7F58TR1dfupDaqVb3hKRBNqcTzY="
+          "Value": "sha256-rs6qPIWJD0Jr7iSZ+S/DGGu9GtVTntvQQVsOY1Tv86c="
         }
       ]
     },
     {
       "Route": "css/styles.css.gz",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-3yyjgiu7ma.gz",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\n9a9k8hffd-6qgk9917nn.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11458,7 +11458,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "31388"
+          "Value": "31375"
         },
         {
           "Name": "Content-Type",
@@ -11466,11 +11466,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mPttx32IIxoC+wC5DhgqTnfWoUZKbc5oxFjSDBEtPRg=\""
+          "Value": "\"EY614ZmD7H/3Em/gSfgLMbuM/k6ajjARPRh5NXiVr74=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 12:18:46 GMT"
+          "Value": "Mon, 24 Feb 2025 01:20:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11488,7 +11488,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mPttx32IIxoC+wC5DhgqTnfWoUZKbc5oxFjSDBEtPRg="
+          "Value": "sha256-EY614ZmD7H/3Em/gSfgLMbuM/k6ajjARPRh5NXiVr74="
         }
       ]
     },
@@ -47441,13 +47441,13 @@
       ]
     },
     {
-      "Route": "js/scripts.awo6u2p9al.js",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-awo6u2p9al.gz",
+      "Route": "js/scripts.adeidd1es3.js",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-adeidd1es3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000729394602"
+          "Quality": "0.000671140940"
         }
       ],
       "ResponseHeaders": [
@@ -47457,15 +47457,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1370"
+          "Value": "1489"
         },
         {
           "Name": "ETag",
-          "Value": "\"eHZNclzQthXX2zIoEiyAVKI659mOiqoQdmOAKxmq/yI=\""
+          "Value": "\"Tl/TnJrAHIq/wvpiebIKx6MfZ/yAM17eXWPJrSDU8tg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 04:43:08 GMT"
+          "Value": "Mon, 24 Feb 2025 11:35:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -47485,13 +47485,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI=\""
+          "Value": "W/\"PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "awo6u2p9al"
+          "Value": "adeidd1es3"
         },
         {
           "Name": "label",
@@ -47499,12 +47499,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI="
+          "Value": "sha256-PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk="
         }
       ]
     },
     {
-      "Route": "js/scripts.awo6u2p9al.js",
+      "Route": "js/scripts.adeidd1es3.js",
       "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\wwwroot\\js\\scripts.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -47514,7 +47514,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5904"
+          "Value": "6395"
         },
         {
           "Name": "Content-Type",
@@ -47522,11 +47522,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI=\""
+          "Value": "\"PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 04:43:08 GMT"
+          "Value": "Mon, 24 Feb 2025 11:35:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -47536,7 +47536,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "awo6u2p9al"
+          "Value": "adeidd1es3"
         },
         {
           "Name": "label",
@@ -47544,13 +47544,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI="
+          "Value": "sha256-PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk="
         }
       ]
     },
     {
-      "Route": "js/scripts.awo6u2p9al.js.gz",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-awo6u2p9al.gz",
+      "Route": "js/scripts.adeidd1es3.js.gz",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-adeidd1es3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -47559,7 +47559,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1370"
+          "Value": "1489"
         },
         {
           "Name": "Content-Type",
@@ -47567,11 +47567,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eHZNclzQthXX2zIoEiyAVKI659mOiqoQdmOAKxmq/yI=\""
+          "Value": "\"Tl/TnJrAHIq/wvpiebIKx6MfZ/yAM17eXWPJrSDU8tg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 04:43:08 GMT"
+          "Value": "Mon, 24 Feb 2025 11:35:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -47589,7 +47589,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "awo6u2p9al"
+          "Value": "adeidd1es3"
         },
         {
           "Name": "label",
@@ -47597,18 +47597,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eHZNclzQthXX2zIoEiyAVKI659mOiqoQdmOAKxmq/yI="
+          "Value": "sha256-Tl/TnJrAHIq/wvpiebIKx6MfZ/yAM17eXWPJrSDU8tg="
         }
       ]
     },
     {
       "Route": "js/scripts.js",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-awo6u2p9al.gz",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-adeidd1es3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000729394602"
+          "Quality": "0.000671140940"
         }
       ],
       "ResponseHeaders": [
@@ -47618,15 +47618,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1370"
+          "Value": "1489"
         },
         {
           "Name": "ETag",
-          "Value": "\"eHZNclzQthXX2zIoEiyAVKI659mOiqoQdmOAKxmq/yI=\""
+          "Value": "\"Tl/TnJrAHIq/wvpiebIKx6MfZ/yAM17eXWPJrSDU8tg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 04:43:08 GMT"
+          "Value": "Mon, 24 Feb 2025 11:35:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -47646,13 +47646,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI=\""
+          "Value": "W/\"PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI="
+          "Value": "sha256-PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk="
         }
       ]
     },
@@ -47667,7 +47667,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5904"
+          "Value": "6395"
         },
         {
           "Name": "Content-Type",
@@ -47675,11 +47675,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI=\""
+          "Value": "\"PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 04:43:08 GMT"
+          "Value": "Mon, 24 Feb 2025 11:35:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -47689,13 +47689,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-irlxgiIrT2oBqmKkpvx7vWy47kOElI0F9X4f4k1YeJI="
+          "Value": "sha256-PirDuZpeBrUqRLTc+I0fH4MEhddj61panfZf9W0WnMk="
         }
       ]
     },
     {
       "Route": "js/scripts.js.gz",
-      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-awo6u2p9al.gz",
+      "AssetFile": "C:\\Users\\Dell\\OneDrive\\Documents\\RazerPage\\iFood\\obj\\Debug\\net9.0\\compressed\\rgso1qffbi-adeidd1es3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -47704,7 +47704,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1370"
+          "Value": "1489"
         },
         {
           "Name": "Content-Type",
@@ -47712,11 +47712,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eHZNclzQthXX2zIoEiyAVKI659mOiqoQdmOAKxmq/yI=\""
+          "Value": "\"Tl/TnJrAHIq/wvpiebIKx6MfZ/yAM17eXWPJrSDU8tg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 04:43:08 GMT"
+          "Value": "Mon, 24 Feb 2025 11:35:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -47734,7 +47734,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eHZNclzQthXX2zIoEiyAVKI659mOiqoQdmOAKxmq/yI="
+          "Value": "sha256-Tl/TnJrAHIq/wvpiebIKx6MfZ/yAM17eXWPJrSDU8tg="
         }
       ]
     },

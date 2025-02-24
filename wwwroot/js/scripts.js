@@ -122,41 +122,50 @@
 // });
 
 
-window.addEventListener('DOMContentLoaded', event => {
+// // window.addEventListener('DOMContentLoaded', event => {
 
-    // Lấy phần tử navbar và danh sách các liên kết trong navbar
-    const navbarCollapsible = document.body.querySelector('#mainNav');
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+// //     // Lấy phần tử navbar và danh sách các liên kết trong navbar
+// //     const navbarCollapsible = document.body.querySelector('#mainNav');
+// //     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-    if (!navbarCollapsible) {
-        return;
+// //     if (!navbarCollapsible) {
+// //         return;
+// //     }
+
+// //     // Kiểm tra xem có đang ở Home/Index không
+// //     var isHomePage = window.location.pathname === "/" || window.location.pathname.toLowerCase() === "/home/index";
+
+// //     // Hàm thay đổi màu chữ navbar
+// //     var updateNavbarTextColor = function () {
+// //         if (window.scrollY === 0 && isHomePage) {
+// //             navbarCollapsible.classList.remove('navbar-shrink');
+// //             navLinks.forEach(link => link.style.color = "#ffffff"); // Chữ trắng khi ở trên cùng trang Home
+// //         } else {
+// //             navbarCollapsible.classList.add('navbar-shrink');
+// //             navLinks.forEach(link => link.style.color = "#000000"); // Chữ đen khi cuộn xuống hoặc ở trang khác
+// //         }
+// //     };
+
+// //     // Nếu không phải trang Home, đổi chữ đen ngay lập tức
+// //     if (!isHomePage) {
+// //         navbarCollapsible.classList.add('navbar-shrink');
+// //         navLinks.forEach(link => link.style.color = "#000000"); // Chữ đen ngay từ đầu
+// //     }
+
+// //     // Áp dụng sự kiện cuộn trang
+// //     document.addEventListener('scroll', updateNavbarTextColor);
+
+// //     // Gọi hàm ngay khi tải trang
+// //     updateNavbarTextColor();
+
+// // });
+
+document.getElementById("menuToggle").addEventListener("click", function () {
+    let menu = document.getElementById("navbarResponsive");
+    if (menu.classList.contains("show")) {
+        menu.classList.remove("show"); // Ẩn menu
+    } else {
+        menu.classList.add("show"); // Hiện menu
     }
-
-    // Kiểm tra xem có đang ở Home/Index không
-    var isHomePage = window.location.pathname === "/" || window.location.pathname.toLowerCase() === "/home/index";
-
-    // Hàm thay đổi màu chữ navbar
-    var updateNavbarTextColor = function () {
-        if (window.scrollY === 0 && isHomePage) {
-            navbarCollapsible.classList.remove('navbar-shrink');
-            navLinks.forEach(link => link.style.color = "#ffffff"); // Chữ trắng khi ở trên cùng trang Home
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink');
-            navLinks.forEach(link => link.style.color = "#000000"); // Chữ đen khi cuộn xuống hoặc ở trang khác
-        }
-    };
-
-    // Nếu không phải trang Home, đổi chữ đen ngay lập tức
-    if (!isHomePage) {
-        navbarCollapsible.classList.add('navbar-shrink');
-        navLinks.forEach(link => link.style.color = "#000000"); // Chữ đen ngay từ đầu
-    }
-
-    // Áp dụng sự kiện cuộn trang
-    document.addEventListener('scroll', updateNavbarTextColor);
-
-    // Gọi hàm ngay khi tải trang
-    updateNavbarTextColor();
-
 });
 

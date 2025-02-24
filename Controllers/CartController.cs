@@ -29,7 +29,8 @@ public class CartController : Controller
     // }
     public async Task<IActionResult> Index()
     {
-        IEnumerable<Cart> carts= await _cartRepository.GetAll();
+
+        IEnumerable<Cart> carts = await _cartRepository.GetAllByUserId();
 
         return View(carts);
     }
@@ -42,30 +43,50 @@ public class CartController : Controller
     [HttpGet]
     public async Task<IActionResult> Create(int id)
     {
+        if(!User.Identity.IsAuthenticated)
+        {
+            TempData["ErrorMessage"] = "should be login account!";
+            return RedirectToAction("Login","Account");
+        }
         var curUser = await HttpContext.User.GetUserById(_userManager);
         var curUserId = HttpContext.User.GetUserId();
+        
         var productToCart = await _productRepository.GetByIdAsync(id);
+
+        var productIncart = await _cartRepository.GetCartByProductIdOfIdentificationUserAsync(id);
+        
         if (productToCart == null)
         {
-            return Json(new { success = false, message = "Sản phẩm không tồn tại!" });
+            TempData["ErrorMessage"] = "Don't have the Product like this!";
         }
-        var cart = new Cart
+        if(productIncart != null)
         {
-            AppUserId = curUserId,
-            AppUser = curUser,
-            ProductId = productToCart.ProductID,
-            product = productToCart,
-            Quantity = 1,
-            Price = productToCart.Price,
-        };
-        if(cart != null)
+            productIncart.Quantity++;
+            _cartRepository.Update(productIncart);
+            TempData["SuccessMessage"] = "increase " + productToCart.Name + " to " + productIncart.Quantity +" at your cart";
+        }
+        else
         {
-            productToCart.Category--;
-            _productRepository.Update(productToCart);
+            var cart = new Cart
+            {
+                AppUserId = curUserId,
+                AppUser = curUser,
+                ProductId = productToCart.ProductID,
+                product = productToCart,
+                Quantity = 1,
+                Price = productToCart.Price,
+            };
+            if(cart != null)
+            {
+                productToCart.Category--;
+                _productRepository.Update(productToCart);
+            }
+            TempData["SuccessMessage"] = "Add new product to cart complete!";
+
+            _cartRepository.Add(cart);
         }
 
-        _cartRepository.Add(cart);
-        return  Json(new { success = true, message = "Sản phẩm đã được thêm vào giỏ hàng!" });
+        return RedirectToAction("Index","Home");
     }
     public async Task<IActionResult> Edit(int id)
     {
@@ -151,9 +172,33 @@ public class CartController : Controller
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
     {
-        var productDetails = await _productRepository.GetByIdAsync(id);
-        if (productDetails == null) return View("Error");
-        return View(productDetails);
+        var productToDelete = await _cartRepository.GetByIdAsync(id);
+
+        // login huy don hang
+
+        // var productToRetoreQuantity = productToDelete.product;
+        // if(productToRetoreQuantity == null)
+        // {
+        //     TempData["WarnMessage"] = "Don't have the product to retore!";
+        //     _cartRepository.Delete(productToDelete);
+        //     return RedirectToAction("Index","Cart");
+        // }
+        // productToRetoreQuantity.Quantity += productToDelete.Quantity;
+
+        // _productRepository.Update(productToRetoreQuantity);
+
+
+
+        if (productToDelete == null)
+        {
+            TempData["ErrorMessage"] = "Don't have the product like this!";
+            return RedirectToAction("Index","Cart");
+        }
+
+
+        _cartRepository.Delete(productToDelete);
+        TempData["SuccessMessage"] = "The product has been removed from your cart!";
+        return RedirectToAction("Index","Cart");
     }
     [HttpPost, ActionName("Delete")]
     public async Task<IActionResult> DeleteProduct(int id)

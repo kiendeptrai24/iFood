@@ -1,8 +1,20 @@
 ﻿
+@using iFood.Data.Enum
 @using iFood.ViewModels
 @model HomeViewModel
 @{
     ViewData["Title"] = "Home Page";
+}
+@{
+    bool isAuthenticated = User.Identity?.IsAuthenticated == true;
+
+    int resultStart = ((Model.Page - 1) * Model.PageSize) + 1;
+    int resultEnd = Math.Min(resultStart + Model.PageSize - 1, Model.TotalClubs);
+
+    bool isValidPage = resultStart <= Model.TotalClubs;
+
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
 
 <style>
@@ -28,6 +40,23 @@
         width: 100%; 
         height: 300px; 
         object-fit: cover;
+    }
+    .no-bullets {
+        list-style-type: none; /* Loại bỏ dấu chấm */
+        padding-left: 0; /* Xóa khoảng thụt lề mặc định */
+    }
+    .fixed-card {
+            height: 170px; /* Chiều cao cố định */
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            overflow: hidden; /* Đảm bảo không bị tràn nội dung */
+    }
+    .fixed-card-img {
+        object-fit: scale-down; /* Cắt ảnh để vừa khung */
+        height: 100%; /* Ảnh full chiều cao */
+        width: 100%; /* Ảnh full chiều rộng */
+        display: block;
     }
 
 }
@@ -110,82 +139,141 @@
 
            
         </header>
-        <!-- About-->
-        <section class="page-section bg-primary" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
+        
+
+
+<section class="space-sm flush-with-above">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
+                        <h2 class="text-black mt-0">We've got what you need!</h2>
                         <hr class="divider divider-light" />
-                       
-
                     </div>
-
                 </div>
-                        <div class="container-fluid p-0" >
-                            <div class="row g-0 " id="boderx">
-                                <div class="col-lg-4 col-sm-6">
-                                    <a class="portfolio-box"style=" width: 200px, height: 50px;" href="~/img/Foot/1.jpg" title="Project Name">
-                                        <img class="img-fluid"  src="~/img/Foot/1.jpg" alt="..." />
-                                        <div class="portfolio-box-caption">
-                                            <div class="project-category text-white-50">Category</div>
-                                            <div class="project-name">Project Name</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <a class="portfolio-box" href="~/img/Foot/2.jpg" title="Project Name">
-                                        <img class="img-fluid" src="~/img/Foot/2.jpg" alt="..." />
-                                        <div class="portfolio-box-caption">
-                                            <div class="project-category text-white-50">Category</div>
-                                            <div class="project-name">Project Name</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <a class="portfolio-box" href="~/img/Foot/3.webp" title="Project Name">
-                                        <img class="img-fluid" src="~/img/Foot/3.webp" alt="..." />
-                                        <div class="portfolio-box-caption">
-                                            <div class="project-category text-white-50">Category</div>
-                                            <div class="project-name">Project Name</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <a class="portfolio-box" href="~/img/Foot/4.jpg" title="Project Name">
-                                        <img class="img-fluid" src="~/img/Foot/4.jpg" alt="..." />
-                                        <div class="portfolio-box-caption">
-                                            <div class="project-category text-white-50">Category</div>
-                                            <div class="project-name">Project Name</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <a class="portfolio-box" href="~/img/Foot/7.jpg" title="Project Name">
-                                        <img class="img-fluid" src="~/img/Foot/7.jpg" alt="..." />
-                                        <div class="portfolio-box-caption">
-                                            <div class="project-category text-white-50">Category</div>
-                                            <div class="project-name">Project Name</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <a class="portfolio-box" href="~/img/Foot/6.jpg" title="Project Name">
-                                        <img class="img-fluid" src="~/img/Foot/6.jpg" alt="..." />
-                                        <div class="portfolio-box-caption p-3">
-                                            <div class="project-category text-white-50">Category</div>
-                                            <div class="project-name">Project Name</div>
-                                        </div>
-                                    </a>
-                                </div>
+                <div class="mb-3">
+                    <a type="button" class="btn btn-secondary mb-1" asp-action="Index" asp-route-page="1" asp-route-category="-1">All</a>
+                    @foreach (var category in Html.GetEnumSelectList<ProductCategory>())
+                    {
+                        <a type="button" class="btn btn-secondary mb-1" asp-action="Index" asp-route-page="1" asp-route-category="@category.Value">@category.Text</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                @if (isValidPage)
+                {
+                    <a type="button" class="btn btn-sm btn-outline-primary @prevDisabled"
+                   asp-action="Index" asp-route-page="@(Model.Page - 1)" asp-route-category="@Model.Category">
+                        Prev
+                    </a>
+                    <a type="button" class="btn btn-sm btn-outline-primary @nextDisabled"
+                   asp-action="Index" asp-route-page="@(Model.Page + 1)" asp-route-category="@Model.Category">
+                        Next
+                    </a>
+                    <span class="text-muted text-small">Results @resultStart - @resultEnd of @Model.TotalClubs</span>
+                }
+            </div>
+        </div>
+        
+        <ul class="row feature-list feature-list-sm no-bullets">
+            @foreach (var product in Model.Products)
+            {
+                @* <a type="button" asp-controller="Product" asp-action="Detail" asp-route-id="@product.ProductID" > *@
+                    <div class="card m-2 col-12 col-md-4 col-lg-3 mt-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <span class="badge badge-pill badge-light text-purple-800 bg-purple-200 mb-2">Nearest Seller</span>
+                            <div>
+                                <a class="fixed-card" type="button" asp-controller="Product" asp-action="Detail"  asp-route-id="@product.ProductID" fixed-card>
+                                @if(@product.Image != null)
+                                {
+                                    <img class="card-img-top card-img-top mb-4 fixed-card-img" src="@product.Image" alt="Card image cap">   
+                                }
+                                else
+                                {
+                                    <img class="card-img-top card-img-top mb-4 fixed-card-img" src="/img/rungroopclub.png" alt="Card image cap">   
+                                }
+                                
+                                </a>
+                            </div>
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text text-muted">Shipped in 3-4 days</p>
+                            <p class="card-text text-muted">Quantity:  @product.Quantity</p>
+                            <p class="card-text font-weight-bold">$@product.Price</p>
+                            <div class="d-flex">
+                                <a type="button" asp-controller="Cart" asp-action="Create"
+                                asp-route-id="@product.ProductID">
+                                <button class="btn btn-light flex-fill mr-2"><i class="bi bi-bag-plus fs-5"></i>
+                                    Add Cart</button>
+                                </a>
+                                <button class="btn btn-primary flex-fill"><i class="bi bi-piggy-bank fs-5"></i>Buy</button>
                             </div>
                         </div>
-
-
-
+                    </div>
+                
+                    @* <li class="col-12 col-md-4 col-lg-3 mt-2"  style="height: 500px;" >
+                        <div class="card">
+                            <a type="button" asp-controller="Product" asp-action="Detail"  asp-route-id="@product.ProductID"  style="height: 300px;">
+                                @if(@product.Image != null)
+                                {
+                                    <img class="card-img-top" src="@product.Image" alt="Card image cap">   
+                                }
+                                else
+                                {
+                                    <img class="card-img-top" src="/img/rungroopclub.png" alt="Card image cap">   
+                                }
+                                
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">@product.Name</h4>
+                                <p class="card-text">@product.Description</p>
+                                <p class="card-text">@product.Quantity, @product.Price</p>Price
+                            </div>
+                            <div class="card-footer card-footer-borderless d-flex justify-content-between">
+                                <div>
+                                    <small>@product.Category</small>
+                                </div>
+                                @if (isAuthenticated && User.IsInRole("admin"))
+                                {
+                                    <div>
+                                        <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Product" asp-action="Edit" asp-route-id="@product.ProductID">
+                                            Edit
+                                        </a>
+                                        <a type="button" class="btn btn-sm btn-outline-danger" asp-controller="Product" asp-action="Delete" asp-route-id="@product.ProductID">
+                                            Delete
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </li> *@
+                @* </a> *@
+            }
+        </ul>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                @if (isValidPage)
+                {
+                    <a type="button" class="btn btn-sm btn-outline-primary @prevDisabled"
+                   asp-action="Index" asp-route-page="@(Model.Page - 1)" asp-route-category="@Model.Category">
+                        Prev
+                    </a>
+                    <a type="button" class="btn btn-sm btn-outline-primary @nextDisabled"
+                   asp-action="Index" asp-route-page="@(Model.Page + 1)" asp-route-category="@Model.Category">
+                        Next
+                    </a>
+                    <span class="text-muted text-small">Results @resultStart - @resultEnd of @Model.TotalClubs</span>
+                }
             </div>
-        </section>
-        <!-- Services-->
+        </div>
+    </div>
+</section>
+
+   
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
                 <h2 class="text-center mt-0">At Your Service</h2>
@@ -223,84 +311,7 @@
             </div>
         </section>
         <!-- Portfolio-->
-        <div class=" bg-primary p-4">
-            <div id="portfolio" class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider divider-light" />
-                    </div>
-                </div>
-                <div class="container-fluid p-0" >
-                    <div class="row g-0 " id="boderx">
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box"style=" width: 200px, height: 50px;" href="~/img/Foot/1.jpg" title="Project Name">
-                                <img class="img-fluid"  src="~/img/Foot/1.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50">Category</div>
-                                    <div class="project-name">Project Name</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="~/img/Foot/2.jpg" title="Project Name">
-                                <img class="img-fluid" src="~/img/Foot/2.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50">Category</div>
-                                    <div class="project-name">Project Name</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="~/img/Foot/3.webp" title="Project Name">
-                                <img class="img-fluid" src="~/img/Foot/3.webp" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50">Category</div>
-                                    <div class="project-name">Project Name</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="~/img/Foot/4.jpg" title="Project Name">
-                                <img class="img-fluid" src="~/img/Foot/4.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50">Category</div>
-                                    <div class="project-name">Project Name</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="~/img/Foot/7.jpg" title="Project Name">
-                                <img class="img-fluid" src="~/img/Foot/7.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50">Category</div>
-                                    <div class="project-name">Project Name</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="~/img/Foot/6.jpg" title="Project Name">
-                                <img class="img-fluid" src="~/img/Foot/6.jpg" alt="..." />
-                                <div class="portfolio-box-caption p-3">
-                                    <div class="project-category text-white-50">Category</div>
-                                    <div class="project-name">Project Name</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                @* <div class="portfolio-container">
-                    <a class="portfolio-box" href="~/img/Foot/1.jpg"><img src="~/img/Foot/1.jpg" alt="..."></a>
-                    <a class="portfolio-box" href="~/img/Foot/2.jpg"><img src="~/img/Foot/2.jpg" alt="..."></a>
-                    <a class="portfolio-box" href="~/img/Foot/3.webp"><img src="~/img/Foot/3.webp" alt="..."></a>
-                    <a class="portfolio-box" href="~/img/Foot/4.jpg"><img src="~/img/Foot/4.jpg" alt="..."></a>
-                    <a class="portfolio-box" href="~/img/Foot/5.jpg"><img src="~/img/Foot/5.jpg" alt="..."></a>
-                    <a class="portfolio-box" href="~/img/Foot/6.jpg"><img src="~/img/Foot/6.jpg" alt="..."></a>
-                </div> *@
-
-            </div>
-        </div>
+     
         <!-- Call to action-->
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
@@ -787,6 +798,19 @@
 <section>
    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="formContainer">
         <div class="form-container w-100 max-w-3xl">
+            <div class="card m-2" style="width: 18rem;">
+            <div class="card-body">
+                <span class="badge badge-pill badge-light text-purple-800 bg-purple-200 mb-2">Nearest Seller</span>
+                <img src="https://storage.googleapis.com/a1aa/image/c1Z6g_rFlDwRwXxtDosOdLpzQwUz1aeUceH3MLtbY0M.jpg" class="card-img-top mb-4" alt="Black wireless bluetooth headset">
+                <h5 class="card-title">Wireless bluetooth headset</h5>
+                <p class="card-text text-muted">Shipped in 3-4 days</p>
+                <p class="card-text font-weight-bold">$35.99</p>
+                <div class="d-flex">
+                    <button class="btn btn-light flex-fill mr-2"><i class="fas fa-cart-plus mr-2"></i>Add Cart</button>
+                    <button class="btn btn-primary flex-fill"><i class="fas fa-shopping-bag mr-2"></i>Buy</button>
+                </div>
+            </div>
+        </div>
             <form action="Edit">
 
                 <div class="row">
@@ -848,5 +872,6 @@
             reader.readAsDataURL(file); // Đọc file ảnh
         }
     });
+   
 
 </script>

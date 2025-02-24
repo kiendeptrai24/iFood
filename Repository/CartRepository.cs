@@ -1,3 +1,4 @@
+using iFood;
 using iFood.Data;
 using iFood.Data.Enum;
 using iFood.Interfaces;
@@ -9,9 +10,12 @@ namespace Repository.Interfaces;
 public class CartRepository : ICartRepository
 {
     private readonly ApplicationDBContext _context;
-    public CartRepository(ApplicationDBContext context)
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    
+    public CartRepository(ApplicationDBContext context, IHttpContextAccessor httpContextAccessor)
     {
         _context = context;
+        _httpContextAccessor = httpContextAccessor;
     }
     public bool Add(Cart cart)
     {
@@ -24,6 +28,13 @@ public class CartRepository : ICartRepository
         _context.Carts.Remove(cart);
         return Save();
     }
+    public async Task<Cart> GetCartByProductIdOfIdentificationUserAsync(int id)
+    {
+        var curUser = _httpContextAccessor.HttpContext?.User.GetUserId();
+
+        return await _context.Carts.Include(i => i.AppUser).Where(r => r.AppUserId == curUser)
+        .FirstOrDefaultAsync(c => c.ProductId == id);
+    }
 
     public async Task<IEnumerable<Cart>> GetAll()
     {
@@ -32,7 +43,7 @@ public class CartRepository : ICartRepository
 
     public async Task<Cart> GetByIdAsync(int id)
     {
-        return await _context.Carts.FirstOrDefaultAsync(c => c.Id == id);
+        return await _context.Carts.Include(i => i.product).FirstOrDefaultAsync(c => c.Id == id);
     }
 
     public async Task<Cart> GetByIdAsyncNoTracking(int id)
@@ -72,5 +83,11 @@ public class CartRepository : ICartRepository
         return Save();
     }
 
+    public async Task<List<Cart>> GetAllByUserId()
+    {
+        var curUser = _httpContextAccessor.HttpContext?.User.GetUserId();
+        var userClubs = _context.Carts.Include(i => i.AppUser).Include(i =>i.product).Where(r => r.AppUser.Id == curUser);
+        return userClubs.ToList();
+    }
 
 }

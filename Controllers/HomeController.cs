@@ -4,6 +4,7 @@ using iFood.Models;
 using iFood.Data;
 using iFood.Interfaces;
 using iFood.ViewModels;
+using iFood.Data.Enum;
 
 namespace iFood.Controllers;
 
@@ -18,11 +19,36 @@ public class HomeController : Controller
         _productRepository = productRepository;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(int category = -1, int page = 1, int pageSize = 8)
     {
-        HomeViewModel homeVM = new HomeViewModel();
-        homeVM.Products = await _productRepository.GetAll();
-        return View(homeVM);
+        if (page < 1 || pageSize < 1)
+        {
+            return NotFound();
+        }
+
+        // if category is -1 (All) dont filter else filter by selected category
+        var products = category switch
+        {
+            -1 => await _productRepository.GetSliceAsync((page - 1) * pageSize, pageSize),
+            _ => await _productRepository.GetProductsByCategoryAndSliceAsync((ProductCategory)category, (page - 1) * pageSize, pageSize),
+        };
+
+        var count = category switch
+        {
+            -1 => await _productRepository.GetCountAsync(),
+            _ => await _productRepository.GetCountByCategoryAsync((ProductCategory)category),
+        };
+
+        var homeViewModel = new HomeViewModel
+        {
+            Products = products,
+            Page = page,
+            PageSize = pageSize,
+            TotalClubs = count,
+            TotalPages = (int)Math.Ceiling(count / (double)pageSize),
+            Category = category,
+        };
+        return View(homeViewModel);
     }
 
     public async Task<IActionResult> Privacy()

@@ -86,12 +86,15 @@ public class ProductController : Controller
                 Price = productVM.Price,
                 Quantity = productVM.Quantity,
             };
+            TempData["SuccessMessage"] = "added "+productVM.Title+" to management";
             _productRepository.Add(product);
             return RedirectToAction("Index");
         }
         else
         {
             ModelState.AddModelError("", "Photo upload failed");
+            TempData["ErrorMessage"] = "Photo upload failed";
+
             return View(productVM);
         }
         
