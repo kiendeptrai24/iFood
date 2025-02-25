@@ -2,17 +2,21 @@ using iFood.Data;
 using iFood.Helpers;
 using iFood.Interfaces;
 using iFood.Models;
+using iFood.Models.Momo;
 using iFood.Service;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repository.Interfaces;
 
-    var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
+//Momo API Payment
+builder.Services.Configure<MomoOptionModel>(builder.Configuration.GetSection("MomoAPI"));
+builder.Services.AddScoped<IMomoService, MomoService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<IMomoRepository,MomoRepository>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<ICartRepository,CartRepository>();
 builder.Services.AddScoped<IPhotoService,PhotoService>();

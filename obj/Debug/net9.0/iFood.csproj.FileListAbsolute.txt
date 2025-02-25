@@ -265,3 +265,4 @@ C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\obj\Debug\net9.0\iFood.sourceli
 C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\obj\Debug\net9.0\compressed\rwua49w78m-acptf84n02.gz
 C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\obj\Debug\net9.0\compressed\n9a9k8hffd-6qgk9917nn.gz
 C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\obj\Debug\net9.0\compressed\rgso1qffbi-adeidd1es3.gz
+C:\Users\Dell\OneDrive\Documents\RazerPage\iFood\bin\Debug\net9.0\RestSharp.dll

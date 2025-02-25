@@ -71,14 +71,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="d-flex justify-content-center mt-5">
-                    <div class="product-card">
+                    <div class="product-card"  style="position: relative; display: inline-block;">
                
                         <img class="product-image"src="@Model.Image" alt="Profile picture" >
-                        @* <div class="product-info">
-                            <div class="product-title">Stylish T-Shirt</div>
-                            <div class="product-price">$29.99</div>
-                            <button class="btn-buy mt-3">Add to Cart</button>
-                        </div> *@
+                        <h5 style="position: absolute; bottom: 2px; right: 5px; background: rgba(0, 0, 0, 0.6); color: white; padding: 1px 5px; border-radius: 5px;">
+                            (123) <i class="bi bi-eye-fill fs-4"></i>
+                        </h5>
                     </div>
                 </div>
                 <div class="d-flex mt-3">
@@ -88,7 +86,11 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <h1 class="h2">@Model.Name</h1>
+                <div class="row">
+
+                    <span  class="col h1">@Model.Name</span>
+                    <h3>(123)<i class="bi bi-eye-fill fs-4"></i></h3>
+                </div>
                 <div class="d-flex align-items-center mt-2">
                     <div id="ratingStars" class="text-warning"></div>
                    <span class="ms-2 text-muted">
@@ -131,7 +133,16 @@
                 </div>
 
                 <div class="mt-4 d-flex">
-                    <button class="add-to-cart-btn" data-id="@Model.ProductID">Add to Cart</button>
+                    <form method="post" asp-action="CreatePaymentMomo" asp-controller="Payment">
+                        
+                        <input type="hidden" name="Amount"  value="@Model.Price" />
+                        <input type="hidden" name="OrderId"  value="@Guid.NewGuid().ToString()"/>
+                        <input type="hidden" name="OrderInfomation"value="thanh toan momo cho don hang tai iFood"  />
+                        <input type="hidden" accesskey=""name="FullName"value="kien ngo"  />
+
+
+                        <button class="btn btn-primary" name="PayUrl" type="submit">Pay with momo</button>
+                    </form>
                     <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Cart" asp-action="Create"
                          asp-route-id="@Model.ProductID">
                                         Add to cart

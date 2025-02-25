@@ -1,26 +1,21 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using iFood.Data.Enum;
 
 namespace iFood.Models
 {
 	public class Order
 	{
 		[Key]
-		public int Id { get; set; }
-		public string Name { get; set; }
-		[Required]
-		[ForeignKey("AppUser")]
-        public string AppUserId { get; set; }
-		public AppUser AppUser { get; set; }
-		[Required]
-		[ForeignKey("Product")]
-		public int ProductId { get; set; }
-		public Product product { get; set; }
-		public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
-		// public DateTime closestUpdateDate {get; set; } = DateTime.UtcNow;
-		public int Status { get; set; }
-		public int Quantity { get; set; }
-		public decimal Price { get; set; }
-		public decimal Total => Quantity * Price;
+		public int OrderId { get; set; }
+
+		public string UserId { get; set; } // Ai đặt hàng
+
+		public decimal TotalPrice { get; set; }
+		public DateTime OrderDate { get; set; }
+
+		public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+
+		public MomoInfo MomoInfo { get; set; } // Thanh toán Momo
 	}
 }

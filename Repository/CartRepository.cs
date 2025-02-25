@@ -35,6 +35,7 @@ public class CartRepository : ICartRepository
         return await _context.Carts.Include(i => i.AppUser).Where(r => r.AppUserId == curUser)
         .FirstOrDefaultAsync(c => c.ProductId == id);
     }
+    
 
     public async Task<IEnumerable<Cart>> GetAll()
     {
