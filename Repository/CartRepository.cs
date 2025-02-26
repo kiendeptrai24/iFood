@@ -87,8 +87,8 @@ public class CartRepository : ICartRepository
     public async Task<List<Cart>> GetAllByUserId()
     {
         var curUser = _httpContextAccessor.HttpContext?.User.GetUserId();
-        var userClubs = _context.Carts.Include(i => i.AppUser).Include(i =>i.product).Where(r => r.AppUser.Id == curUser);
-        return userClubs.ToList();
+        var userCarts = _context.Carts.Include(i => i.AppUser).Include(i =>i.product).Where(r => r.AppUser.Id == curUser);
+        return userCarts.ToList();
     }
 
 }

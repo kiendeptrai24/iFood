@@ -12,6 +12,7 @@ public interface IProductRepository
     Task<int> GetCountAsync();
     Task<int> GetCountByCategoryAsync(ProductCategory category);
     Task<Product> GetByIdAsyncNoTracking(int id);
+    void CheckAttackProduct(Product product);
     bool Add(Product product);
     bool Update(Product product);
     bool Delete(Product product);

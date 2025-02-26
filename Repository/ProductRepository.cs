@@ -19,6 +19,11 @@ public class ProductRepository : IProductRepository
         return Save();
     }
 
+    public void CheckAttackProduct(Product product)
+    {
+        _context.Attach(product);
+    }
+
     public bool Delete(Product product)
     {
         _context.Products.Remove(product);

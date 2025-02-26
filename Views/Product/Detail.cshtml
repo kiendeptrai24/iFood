@@ -133,7 +133,7 @@
                 </div>
 
                 <div class="mt-4 d-flex">
-                    <form method="post" asp-action="CreatePaymentMomo" asp-controller="Payment">
+                    @* <form method="post" asp-action="CreatePaymentMomo" asp-controller="Payment">
                         
                         <input type="hidden" name="Amount"  value="@Model.Price" />
                         <input type="hidden" name="OrderId"  value="@Guid.NewGuid().ToString()"/>
@@ -142,7 +142,11 @@
 
 
                         <button class="btn btn-primary" name="PayUrl" type="submit">Pay with momo</button>
-                    </form>
+                    </form> *@
+                    <a class="btn btn-primary" name="PayUrl" type="button" asp-action="CreatePaymentMomo"
+                     asp-controller="Payment" asp-route-id="@Model.ProductID">
+                        Pay with momo
+                    </a>
                     <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Cart" asp-action="Create"
                          asp-route-id="@Model.ProductID">
                                         Add to cart

@@ -7,65 +7,66 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Repository.Interfaces;
 
-public class MomoRepository : IMomoRepository
+public class OrderRepository : IOrderRepository
 {
     private readonly ApplicationDBContext _context;
     private readonly IHttpContextAccessor _httpContextAccessor;
-    public MomoRepository(ApplicationDBContext context,IHttpContextAccessor httpContextAccessor)
+
+    public OrderRepository(ApplicationDBContext context,IHttpContextAccessor httpContextAccessor)
     {
         _context = context;
         _httpContextAccessor = httpContextAccessor;
     }
 
-    public bool Add(MomoInfo momoInfo)
+    public bool Add(Order order)
     {
-        _context.MomoInfos.Add(momoInfo);
+        _context.Orders.Add(order);
         return Save();
     }
-    public async Task<bool> AddAsync(MomoInfo momoInfo)
+    public async Task<bool> AddAsync(Order order)
     {
-        _context.MomoInfos.AddAsync(momoInfo);
+        _context.Orders.AddAsync(order);
         return await SaveAsync();
     }
 
-    public bool Delete(MomoInfo momoInfo)
+    public bool Delete(Order order)
     {
-        _context.MomoInfos.Remove(momoInfo);
+        _context.Orders.Remove(order);
         return Save();
     }
 
-    public async Task<IEnumerable<MomoInfo>> GetAll()
+    public async Task<IEnumerable<Order>> GetAll()
     {
-        return await _context.MomoInfos.Include(i => i.Order).ToListAsync();
+        
+        return await _context.Orders.Include(i => i.OrderDetails).ToListAsync();
     }
 
-    public async Task<List<MomoInfo>> GetAllByUserId()
+    public async Task<List<Order>> GetAllByUserId()
     {
         var curUser = _httpContextAccessor.HttpContext?.User.GetUserId();
-        var userOrders = _context.MomoInfos.Include(i => i.Order).Where(r => r.AppUserId == curUser);
+        var userOrders = _context.Orders.Include(i => i.OrderDetails).Where(r => r.AppUserId == curUser);
         return await userOrders.ToListAsync();
     }
 
-    public Task<MomoInfo> GetByIdAsync(int id)
+    public Task<Order> GetByIdAsync(int id)
     {
         throw new NotImplementedException();
     }
 
-    public Task<MomoInfo> GetByIdAsyncNoTracking(int id)
+    public Task<Order> GetByIdAsyncNoTracking(int id)
     {
         throw new NotImplementedException();
     }
 
     public async Task<int> GetCountAsync()
     {
-        return _context.MomoInfos.Count();
+        return await _context.Orders.CountAsync();
     }
 
-    public Task<IEnumerable<MomoInfo>> GetSliceAsync(int offset, int size)
+    public Task<IEnumerable<Order>> GetSliceAsync(int offset, int size)
     {
         throw new NotImplementedException();
     }
-
 
     public bool Save()
     {
@@ -78,9 +79,9 @@ public class MomoRepository : IMomoRepository
         return saved > 0 ? true : false;
     }
 
-    public bool Update(MomoInfo momoInfo)
+    public bool Update(Order order)
     {
-        throw new NotImplementedException();
+        _context.Orders.Update(order);
+        return Save();
     }
-    
 }

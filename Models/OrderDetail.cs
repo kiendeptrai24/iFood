@@ -7,11 +7,7 @@ namespace iFood.Models
 	public class OrderDetail
 	{
 		[Key]
-		public int OrderDetailId { get; set; }
-
-		[ForeignKey("Order")]
-		public int OrderId { get; set; }
-		public Order Order { get; set; }
+		public int Id { get; set; }
 
 		[ForeignKey("Product")]
 		public int ProductId { get; set; }
@@ -19,7 +15,7 @@ namespace iFood.Models
 
 		public int Quantity { get; set; }
 		
-		public decimal TotalPrice { get; set; }
+		public decimal TotalPrice => Product != null ? Product.Price * Quantity : 0;
 
 	}
 }

@@ -18,6 +18,6 @@ namespace iFood.Data
         public DbSet<Cart> Carts{ get; set;}
         public DbSet<Wishlist> Wishlists { get; set;}
         public DbSet<MomoInfo> MomoInfos { get; set;}
-
+        public DbSet<OrderDetail> OrderDetails { get; set;}
     }
 }
