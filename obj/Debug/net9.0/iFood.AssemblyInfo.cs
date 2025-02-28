@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iFood")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ee0db2f1c21f4c60509e4f2f8d6f0fcdb4817d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64a542171ea43358bb3f9e432d56477e59167a1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("iFood")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iFood")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
